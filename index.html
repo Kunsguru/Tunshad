@@ -19,18 +19,57 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
         .header {
+            position: relative;
             text-align: center;
+            padding: 10% 5%;
+            background: url('/storage/emulated/0/Pictures/Screenshot/Screenshot_20240719-063456.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+        .header-content {
+            position: relative;
+            z-index: 2;
         }
         .header h1 {
+            font-size: 2.5em;
+            font-weight: bold;
             margin: 10px 0;
+        }
+        .header p {
+            margin: 5px 0;
+            font-size: 1.2em;
         }
         .contact-info {
             display: flex;
             justify-content: space-around;
             margin: 20px 0;
         }
+        .contact-info button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .contact-info button:hover {
+            background-color: #45a049;
+        }
         .products {
             margin: 20px 0;
+        }
+        .products h2 {
+            text-align: center;
+            margin-bottom: 20px;
         }
         .product {
             display: flex;
@@ -44,6 +83,23 @@
         }
         .product-details {
             flex: 1;
+        }
+        .product-details h3 {
+            margin: 0 0 10px;
+        }
+        .product-details p {
+            margin: 5px 0;
+        }
+        .services {
+            margin: 20px 0;
+        }
+        .services h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .services p {
+            margin: 10px 0;
+            text-align: justify;
         }
         .footer {
             text-align: center;
@@ -61,13 +117,30 @@
         .footer button:hover {
             background-color: #45a049;
         }
+        .info {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        @media (max-width: 600px) {
+            .header {
+                padding: 15% 5%;
+            }
+            .header h1 {
+                font-size: 2em;
+            }
+            .header p {
+                font-size: 1em;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header">
-            <h1>TUNSHAD PAINT & ENGINEERING CONSULTANCY</h1>
-            <p>Engnr. Nofisat Yekini</p>
+            <div class="header-content">
+                <h1>TUNSHAD PAINT & ENGINEERING CONSULTANCY</h1>
+            </div>
         </div>
         <div class="contact-info">
             <button onclick="window.location.href='tel:07045786155'">Call</button>
@@ -77,7 +150,7 @@
         <div class="products" id="catalog">
             <h2>Products</h2>
             <div class="product">
-                <img src="https://via.placeholder.com/80" alt="Product Image">
+                <img src="path/to/product1.jpg" alt="Plan/Design & Site Survey">
                 <div class="product-details">
                     <h3>Plan/Design & Site Survey</h3>
                     <p>Price: NGN 100,000.00</p>
@@ -85,20 +158,28 @@
                 </div>
             </div>
             <div class="product">
-                <img src="https://via.placeholder.com/80" alt="Product Image">
+                <img src="path/to/product2.jpg" alt="Learn Paint Production">
                 <div class="product-details">
                     <h3>Learn Paint Production</h3>
                     <p>Price: NGN 50,000.00</p>
                 </div>
             </div>
             <div class="product">
-                <img src="https://via.placeholder.com/80" alt="Product Image">
+                <img src="path/to/product3.jpg" alt="Paint">
                 <div class="product-details">
                     <h3>Paints</h3>
                     <p>Price: NGN 2,000.00</p>
                     <p>Negotiable</p>
                 </div>
             </div>
+        </div>
+        <div class="services">
+            <h2>Our Services</h2>
+            <p>Civil Engineer, Paint Manufacturer, Real Estate Consultancy, Leachfield & Septic System Installation, Electrical Fence Installation, Architectural Design, and more.</p>
+        </div>
+        <div class="info">
+            <p>Engr Nofisat Yekini</p>
+            <p>Open 24 hours</p>
         </div>
         <div class="footer">
             <p>Looking for something else? Message Engr Nofisat/TUNSHAD PAINT and ENGINEERING CONSULTANCY.</p>
@@ -124,5 +205,6 @@
     </script>
 </body>
 </html>
+
 
 
