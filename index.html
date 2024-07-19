@@ -70,9 +70,9 @@
             <p>Nofisat Yekini</p>
         </div>
         <div class="contact-info">
-            <button onclick="window.location.href='tel:+1234567890'">Call</button>
+            <button onclick="window.location.href='tel:07045786155'">Call</button>
             <button onclick="window.location.href='#catalog'">Catalog</button>
-            <button onclick="window.location.href='#'">Share</button>
+            <button onclick="shareContent()">Share</button>
         </div>
         <div class="products" id="catalog">
             <h2>Products</h2>
@@ -102,9 +102,26 @@
         </div>
         <div class="footer">
             <p>Looking for something else? Message Engr Nofisat/TUNSHAD PAINT and ENGINEERING CONSULTANCY.</p>
-            <button onclick="window.location.href='#'">Message</button>
+            <button onclick="window.location.href='mailto:mondaykingsley80@gmail.com?subject=Inquiry%20about%20services&body=Hello%20Engr%20Nofisat,%0D%0A%0D%0AI%20would%20like%20to%20inquire%20about%20your%20services.%0D%0A%0D%0AThank%20you!'">Message</button>
         </div>
     </div>
+    <script>
+        function shareContent() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'TUNSHAD PAINT & ENGINEERING CONSULTANCY',
+                    text: 'Check out TUNSHAD PAINT & ENGINEERING CONSULTANCY by Nofisat Yekini.',
+                    url: window.location.href
+                }).then(() => {
+                    console.log('Thanks for sharing!');
+                }).catch((err) => {
+                    console.error('Error sharing:', err);
+                });
+            } else {
+                alert('Your browser does not support the Web Share API.');
+            }
+        }
+    </script>
 </body>
 </html>
 
