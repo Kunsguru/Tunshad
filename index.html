@@ -140,7 +140,6 @@
         <div class="header">
             <div class="header-content">
                 <h1>TUNSHAD PAINT & ENGINEERING CONSULTANCY</h1>
-                <p id="welcome-message"></p>
             </div>
         </div>
         <div class="contact-info">
@@ -203,18 +202,6 @@
                 alert('Your browser does not support the Web Share API.');
             }
         }
-
-        function welcomeUser() {
-            let name = prompt('Welcome! Please enter your name:');
-            if (name) {
-                document.getElementById('welcome-message').innerText = 'Welcome, ' + name + '!';
-            } else {
-                document.getElementById('welcome-message').innerText = 'Welcome to our website!';
-            }
-        }
-
-        // Call the welcomeUser function when the page loads
-        window.onload = welcomeUser;
     </script>
 </body>
 </html>
